@@ -5,12 +5,12 @@
 class CopiaCli < Formula
   desc "CLI for Copia — source control for industrial automation"
   homepage "https://github.com/qubernetic/copia-cli"
-  version "0.5.0-rc.1"
-  license "MIT"
+  version "0.5.0-rc.2"
+  license "AGPL-3.0"
 
   on_macos do
-    url "https://github.com/qubernetic/copia-cli/releases/download/v0.5.0-rc.1/copia-cli_0.5.0-rc.1_darwin_all.tar.gz"
-    sha256 "f7110cf8e748c650054c35656f6e73064e071d9e563d8f00814ae37fdf8b930b"
+    url "https://github.com/qubernetic/copia-cli/releases/download/v0.5.0-rc.2/copia-cli_0.5.0-rc.2_darwin_all.tar.gz"
+    sha256 "7e3eb7b9f13a54cd63adb0fa97437c6a97378241690ca69f03f78a0a0c58a9ae"
 
     define_method(:install) do
       bin.install "copia-cli"
@@ -19,22 +19,22 @@ class CopiaCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/qubernetic/copia-cli/releases/download/v0.5.0-rc.1/copia-cli_0.5.0-rc.1_linux_amd64.tar.gz"
-      sha256 "9079cd4967399021b68851b3b530ad306f3a816e7b16c30776535b250fc2aedd"
+      url "https://github.com/qubernetic/copia-cli/releases/download/v0.5.0-rc.2/copia-cli_0.5.0-rc.2_linux_amd64.tar.gz"
+      sha256 "3ad4d66e99028d97dd42b1ee7ba5d5dd805c2956f5972d98672fe5ae5c31407a"
       define_method(:install) do
         bin.install "copia-cli"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/qubernetic/copia-cli/releases/download/v0.5.0-rc.1/copia-cli_0.5.0-rc.1_linux_arm.tar.gz"
-      sha256 "b071999283c3bf4e5d395ca2524daa2951b0620c2d2224e64f54c1ef5a663022"
+      url "https://github.com/qubernetic/copia-cli/releases/download/v0.5.0-rc.2/copia-cli_0.5.0-rc.2_linux_arm.tar.gz"
+      sha256 "13247337c1aadc2c0d2a7e08fe3bbaac41d3df11ac723b9e50ff2da88be07b73"
       define_method(:install) do
         bin.install "copia-cli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/qubernetic/copia-cli/releases/download/v0.5.0-rc.1/copia-cli_0.5.0-rc.1_linux_arm64.tar.gz"
-      sha256 "8f67f06c9f2f26c7248ab4eae84aa5906a81ab35cfd99fc4fc1809ea239064c2"
+      url "https://github.com/qubernetic/copia-cli/releases/download/v0.5.0-rc.2/copia-cli_0.5.0-rc.2_linux_arm64.tar.gz"
+      sha256 "233c6d2820c728c6213f226bbdc4e598085acac14966819782e618196fc5fd1b"
       define_method(:install) do
         bin.install "copia-cli"
       end
